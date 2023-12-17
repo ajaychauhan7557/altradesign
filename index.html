@@ -1,0 +1,921 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Test</title>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <!-- Link Swiper's CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="https://cdn.rawgit.com/daneden/animate.css/v3.1.0/animate.min.css">
+
+  <!-- custom css -->
+  <link rel="stylesheet" href="./css/styles.css">
+  <link rel="stylesheet" href="./css/md.css" media="screen and (max-width: 1050px)">
+  <link rel="stylesheet" href="./css/sm.css" media="screen and (max-width: 576px)">
+</head>
+
+<body class="">
+  <div id="nav-wrap">
+    <nav data-wow-delay="0.2s" class="nav wow fadeInUp">
+      <div class="container-large">
+        <div class="nav-content">
+          <div class="logo-wrap wow fadeInUp" data-wow-delay="0.4s">
+            <img src="./images/logo.png" alt="logo">
+          </div>
+          <ul id="nav-menu" class="nav-menu">
+            <li class="nav-menu-item link wow fadeInUp" data-wow-delay="0.6s"><a>All Flights</a></li>
+            <li class="nav-menu-item link wow fadeInUp" data-wow-delay="0.8s"><a>Schedule</a></li>
+            <li class="nav-menu-item link wow fadeInUp" data-wow-delay="1s"><a>Passengers</a></li>
+            <li class="nav-menu-item link wow fadeInUp" data-wow-delay="1.2s"><a>Your Orders</a></li>
+            <li class="nav-menu-item wow fadeInUp" data-wow-delay="1.4s"><button class="btn bg-trans border-white">Let's
+                Try</button></li>
+          </ul>
+          <div class="hamburger-menu">
+            <a href="javascript:void(0);" class="icon" onclick="openCloseMenu()">
+              <i class="fa fa-bars"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </div>
+
+  <section id="section-hero" class="section-hero">
+    <div class="container-large">
+      <div class="hero-top">
+        <img class="wow fadeInUp" src="./images/jet 2024 large.png" alt="jet 2024" data-wow-delay="1.6s">
+        <div class="hero-plane ">
+          <img class="wow fadeInUp" src="./images/plane.png" alt="plane" data-wow-delay="1.6s">
+        </div>
+        <!-- <div class="hero-top-bg"><img src="./images/plane.png" alt="plane"></div> -->
+      </div>
+      <div class="hero-bottom">
+        <div class="hero-title-wrap">
+          <h1 class="wow fadeInUp" data-wow-delay="1.8s">Travel Around The World</h1>
+          <p class="wow fadeInUp" data-wow-delay="2s">One of the advantages of being disorganized is that one is
+            always having surprising discoveries</p>
+        </div>
+        <div class="booking-tab">
+          <div class="booking-tab-labels wow fadeInUp" data-wow-delay="0.4s">
+            <a onclick="showForm('booking-form-economy')" href="#booking-form-economy"
+              class="active tab-left">Economy</a>
+            <a onclick="showForm('booking-form-business')" href="#booking-form-business">Business</a>
+            <a onclick="showForm('booking-form-first')" href="#booking-form-first" class="tab-right">First</a>
+          </div>
+          <div class="booking-tab-content wow fadeInUp" data-wow-delay="0.5s">
+            <form id="booking-form-economy" class="booking-form" name="booking-form-economy" action="#">
+              <div class="booking-form-items">
+                <div class="booking-form-item">
+                  <div class="booking-form-item-left">
+                    <img src="./images/location.png" alt="">
+                  </div>
+                  <div class="booking-form-item-right">
+                    <span>Location</span>
+                    <input value="" type="text" placeholder="Where are you going?">
+                  </div>
+                </div>
+                <div class="booking-form-item">
+                  <div class="booking-form-item-left">
+                    <img src="./images/profile-2user.png" alt="">
+                  </div>
+                  <div class="booking-form-item-right">
+                    <span>Travelers</span>
+                    <input value="" type="text" placeholder="Add guest">
+                  </div>
+                </div>
+                <div class="booking-form-item">
+                  <div class="booking-form-item-left">
+                    <img src="./images/calendar-2.png" alt="">
+                  </div>
+                  <div class="booking-form-item-right">
+                    <span>Check-in</span>
+                    <input value="" type="text" placeholder="Add date">
+                  </div>
+                </div>
+                <div class="booking-form-item">
+                  <div class="booking-form-item-left">
+                    <img src="./images/calendar-2.png" alt="">
+                  </div>
+                  <div class="booking-form-item-right">
+                    <span>Check-out</span>
+                    <input value="" type="text" placeholder="Add date">
+                  </div>
+                </div>
+
+              </div>
+              <div class="booking-form-submit wow fadeInUp" data-wow-delay="0.7s">
+                <button>Book Now</button>
+              </div>
+            </form>
+            <form id="booking-form-business" class="booking-form" name="booking-form-economy" action="#">
+              <div class="booking-form-items">
+                <div class="booking-form-item">
+                  <div class="booking-form-item-left">
+                    <img src="./images/location.png" alt="">
+                  </div>
+                  <div class="booking-form-item-right">
+                    <span>Location</span>
+                    <input value="" type="text" placeholder="Where are you going?">
+                  </div>
+                </div>
+                <div class="booking-form-item">
+                  <div class="booking-form-item-left">
+                    <img src="./images/profile-2user.png" alt="">
+                  </div>
+                  <div class="booking-form-item-right">
+                    <span>Travelers</span>
+                    <input value="" type="text" placeholder="Add guest">
+                  </div>
+                </div>
+                <div class="booking-form-item">
+                  <div class="booking-form-item-left">
+                    <img src="./images/calendar-2.png" alt="">
+                  </div>
+                  <div class="booking-form-item-right">
+                    <span>Check-in</span>
+                    <input value="" type="text" placeholder="Add date">
+                  </div>
+                </div>
+                <div class="booking-form-item">
+                  <div class="booking-form-item-left">
+                    <img src="./images/calendar-2.png" alt="">
+                  </div>
+                  <div class="booking-form-item-right">
+                    <span>Check-out</span>
+                    <input value="" type="text" placeholder="Add date">
+                  </div>
+                </div>
+
+              </div>
+              <div class="booking-form-submit">
+                <button>Book Now</button>
+              </div>
+            </form>
+            <form id="booking-form-first" class="booking-form" name="booking-form-economy" action="#">
+              <div class="booking-form-items">
+                <div class="booking-form-item">
+                  <div class="booking-form-item-left">
+                    <img src="./images/location.png" alt="">
+                  </div>
+                  <div class="booking-form-item-right">
+                    <span>Location</span>
+                    <input value="" type="text" placeholder="Where are you going?">
+                  </div>
+                </div>
+                <div class="booking-form-item">
+                  <div class="booking-form-item-left">
+                    <img src="./images/profile-2user.png" alt="">
+                  </div>
+                  <div class="booking-form-item-right">
+                    <span>Travelers</span>
+                    <input value="" type="text" placeholder="Add guest">
+                  </div>
+                </div>
+                <div class="booking-form-item">
+                  <div class="booking-form-item-left">
+                    <img src="./images/calendar-2.png" alt="">
+                  </div>
+                  <div class="booking-form-item-right">
+                    <span>Check-in</span>
+                    <input value="" type="text" placeholder="Add date">
+                  </div>
+                </div>
+                <div class="booking-form-item">
+                  <div class="booking-form-item-left">
+                    <img src="./images/calendar-2.png" alt="">
+                  </div>
+                  <div class="booking-form-item-right">
+                    <span>Check-out</span>
+                    <input value="" type="text" placeholder="Add date">
+                  </div>
+                </div>
+
+              </div>
+              <div class="booking-form-submit">
+                <button>Book Now</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="section-flight">
+    <div class="container-large">
+      <div class="flight-wrap">
+        <div class="flight-left">
+          <h3 class="wow fadeInUp" data-wow-delay="0.4s">Book Popular Flight Tickets</h3>
+          <p class="wow fadeInUp" data-wow-delay="0.6s">Lorem Ipsum is simply dummy text of the printing and typesetting
+            industry. Lorem Ipsum has been the
+            industry's</p>
+          <div class="wow fadeInUp" data-wow-delay="0.8s">
+            <img id="flying-plan" src="./images/plane-flying-small.png" alt="">
+          </div>
+        </div>
+        <div class="flight-right wow fadeInUp" data-wow-delay="1s">
+          <div class="swiper" id="FlightCards">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide slide-card">
+                <div class="slide-content-item one">
+                  <button class="btn">Economy Saver</button>
+                  <div class="right">
+                    <h6>UK</h6>
+                    <img src="./images/plane-blue-small.png" alt="plane blue small">
+                    <h6>BD</h6>
+                  </div>
+                </div>
+                <div class="slide-content-item two">
+                  <h6>6 Flight Tickets</h6>
+                </div>
+                <div class="slide-content-item details">
+                  <div class="slide-content-item-detail">
+                    <p>Passenger</p>
+                    <h6>Raju Mullah</h6>
+                  </div>
+                  <div class="slide-content-item-detail">
+                    <p>Date</p>
+                    <h6>20 Nov 2022</h6>
+                  </div>
+                </div>
+                <div class="slide-content-item details">
+                  <div class="slide-content-item-detail">
+                    <p>Flight</p>
+                    <h6>#5486626661</h6>
+                  </div>
+                  <div class="slide-content-item-detail">
+                    <p>Gate</p>
+                    <h6>20 A</h6>
+                  </div>
+                </div>
+                <div class="slide-content-item details">
+                  <div class="slide-content-item-detail">
+                    <p>Class</p>
+                    <h6>Economy</h6>
+                  </div>
+                  <div class="slide-content-item-detail">
+                    <p>Seats</p>
+                    <h6>5B - 11B</h6>
+                  </div>
+                </div>
+                <div class="slide-content-item-hr">
+                  <img src="./images/horizontal bar.png" alt="hr bar half round">
+                </div>
+                <div class="slide-content-item-last ">
+                  <img src="./images/qr code.png" alt="hr bar half round">
+                </div>
+              </div>
+              <div class="swiper-slide slide-card">
+                <div class="slide-content-item one">
+                  <button class="btn">Economy Saver</button>
+                  <div class="right">
+                    <h6>UK</h6>
+                    <img src="./images/plane-blue-small.png" alt="plane blue small">
+                    <h6>BD</h6>
+                  </div>
+                </div>
+                <div class="slide-content-item two">
+                  <h6>6 Flight Tickets</h6>
+                </div>
+                <div class="slide-content-item details">
+                  <div class="slide-content-item-detail">
+                    <p>Passenger</p>
+                    <h6>Raju Mullah</h6>
+                  </div>
+                  <div class="slide-content-item-detail">
+                    <p>Date</p>
+                    <h6>20 Nov 2022</h6>
+                  </div>
+                </div>
+                <div class="slide-content-item details">
+                  <div class="slide-content-item-detail">
+                    <p>Flight</p>
+                    <h6>#5486626661</h6>
+                  </div>
+                  <div class="slide-content-item-detail">
+                    <p>Gate</p>
+                    <h6>20 A</h6>
+                  </div>
+                </div>
+                <div class="slide-content-item details">
+                  <div class="slide-content-item-detail">
+                    <p>Class</p>
+                    <h6>Economy</h6>
+                  </div>
+                  <div class="slide-content-item-detail">
+                    <p>Seats</p>
+                    <h6>5B - 11B</h6>
+                  </div>
+                </div>
+                <div class="slide-content-item-hr">
+                  <img src="./images/horizontal bar.png" alt="hr bar half round">
+                </div>
+                <div class="slide-content-item-last ">
+                  <img src="./images/qr code.png" alt="hr bar half round">
+                </div>
+              </div>
+              <div class="swiper-slide slide-card">
+                <div class="slide-content-item one">
+                  <button class="btn">Economy Saver</button>
+                  <div class="right">
+                    <h6>UK</h6>
+                    <img src="./images/plane-blue-small.png" alt="plane blue small">
+                    <h6>BD</h6>
+                  </div>
+                </div>
+                <div class="slide-content-item two">
+                  <h6>6 Flight Tickets</h6>
+                </div>
+                <div class="slide-content-item details">
+                  <div class="slide-content-item-detail">
+                    <p>Passenger</p>
+                    <h6>Raju Mullah</h6>
+                  </div>
+                  <div class="slide-content-item-detail">
+                    <p>Date</p>
+                    <h6>20 Nov 2022</h6>
+                  </div>
+                </div>
+                <div class="slide-content-item details">
+                  <div class="slide-content-item-detail">
+                    <p>Flight</p>
+                    <h6>#5486626661</h6>
+                  </div>
+                  <div class="slide-content-item-detail">
+                    <p>Gate</p>
+                    <h6>20 A</h6>
+                  </div>
+                </div>
+                <div class="slide-content-item details">
+                  <div class="slide-content-item-detail">
+                    <p>Class</p>
+                    <h6>Economy</h6>
+                  </div>
+                  <div class="slide-content-item-detail">
+                    <p>Seats</p>
+                    <h6>5B - 11B</h6>
+                  </div>
+                </div>
+                <div class="slide-content-item-hr">
+                  <img src="./images/horizontal bar.png" alt="hr bar half round">
+                </div>
+                <div class="slide-content-item-last ">
+                  <img src="./images/qr code.png" alt="hr bar half round">
+                </div>
+              </div>
+              <div class="swiper-slide slide-card">
+                <div class="slide-content-item one">
+                  <button class="btn">Economy Saver</button>
+                  <div class="right">
+                    <h6>UK</h6>
+                    <img src="./images/plane-blue-small.png" alt="plane blue small">
+                    <h6>BD</h6>
+                  </div>
+                </div>
+                <div class="slide-content-item two">
+                  <h6>6 Flight Tickets</h6>
+                </div>
+                <div class="slide-content-item details">
+                  <div class="slide-content-item-detail">
+                    <p>Passenger</p>
+                    <h6>Raju Mullah</h6>
+                  </div>
+                  <div class="slide-content-item-detail">
+                    <p>Date</p>
+                    <h6>20 Nov 2022</h6>
+                  </div>
+                </div>
+                <div class="slide-content-item details">
+                  <div class="slide-content-item-detail">
+                    <p>Flight</p>
+                    <h6>#5486626661</h6>
+                  </div>
+                  <div class="slide-content-item-detail">
+                    <p>Gate</p>
+                    <h6>20 A</h6>
+                  </div>
+                </div>
+                <div class="slide-content-item details">
+                  <div class="slide-content-item-detail">
+                    <p>Class</p>
+                    <h6>Economy</h6>
+                  </div>
+                  <div class="slide-content-item-detail">
+                    <p>Seats</p>
+                    <h6>5B - 11B</h6>
+                  </div>
+                </div>
+                <div class="slide-content-item-hr">
+                  <img src="./images/horizontal bar.png" alt="hr bar half round">
+                </div>
+                <div class="slide-content-item-last ">
+                  <img src="./images/qr code.png" alt="hr bar half round">
+                </div>
+              </div>
+              <div class="swiper-slide slide-card">
+                <div class="slide-content-item one">
+                  <button class="btn">Economy Saver</button>
+                  <div class="right">
+                    <h6>UK</h6>
+                    <img src="./images/plane-blue-small.png" alt="plane blue small">
+                    <h6>BD</h6>
+                  </div>
+                </div>
+                <div class="slide-content-item two">
+                  <h6>6 Flight Tickets</h6>
+                </div>
+                <div class="slide-content-item details">
+                  <div class="slide-content-item-detail">
+                    <p>Passenger</p>
+                    <h6>Raju Mullah</h6>
+                  </div>
+                  <div class="slide-content-item-detail">
+                    <p>Date</p>
+                    <h6>20 Nov 2022</h6>
+                  </div>
+                </div>
+                <div class="slide-content-item details">
+                  <div class="slide-content-item-detail">
+                    <p>Flight</p>
+                    <h6>#5486626661</h6>
+                  </div>
+                  <div class="slide-content-item-detail">
+                    <p>Gate</p>
+                    <h6>20 A</h6>
+                  </div>
+                </div>
+                <div class="slide-content-item details">
+                  <div class="slide-content-item-detail">
+                    <p>Class</p>
+                    <h6>Economy</h6>
+                  </div>
+                  <div class="slide-content-item-detail">
+                    <p>Seats</p>
+                    <h6>5B - 11B</h6>
+                  </div>
+                </div>
+                <div class="slide-content-item-hr">
+                  <img src="./images/horizontal bar.png" alt="hr bar half round">
+                </div>
+                <div class="slide-content-item-last ">
+                  <img src="./images/qr code.png" alt="hr bar half round">
+                </div>
+              </div>
+              <div class="swiper-slide slide-card">
+                <div class="slide-content-item one">
+                  <button class="btn">Economy Saver</button>
+                  <div class="right">
+                    <h6>UK</h6>
+                    <img src="./images/plane-blue-small.png" alt="plane blue small">
+                    <h6>BD</h6>
+                  </div>
+                </div>
+                <div class="slide-content-item two">
+                  <h6>6 Flight Tickets</h6>
+                </div>
+                <div class="slide-content-item details">
+                  <div class="slide-content-item-detail">
+                    <p>Passenger</p>
+                    <h6>Raju Mullah</h6>
+                  </div>
+                  <div class="slide-content-item-detail">
+                    <p>Date</p>
+                    <h6>20 Nov 2022</h6>
+                  </div>
+                </div>
+                <div class="slide-content-item details">
+                  <div class="slide-content-item-detail">
+                    <p>Flight</p>
+                    <h6>#5486626661</h6>
+                  </div>
+                  <div class="slide-content-item-detail">
+                    <p>Gate</p>
+                    <h6>20 A</h6>
+                  </div>
+                </div>
+                <div class="slide-content-item details">
+                  <div class="slide-content-item-detail">
+                    <p>Class</p>
+                    <h6>Economy</h6>
+                  </div>
+                  <div class="slide-content-item-detail">
+                    <p>Seats</p>
+                    <h6>5B - 11B</h6>
+                  </div>
+                </div>
+                <div class="slide-content-item-hr">
+                  <img src="./images/horizontal bar.png" alt="hr bar half round">
+                </div>
+                <div class="slide-content-item-last ">
+                  <img src="./images/qr code.png" alt="hr bar half round">
+                </div>
+              </div>
+              <div class="swiper-slide slide-card">
+                <div class="slide-content-item one">
+                  <button class="btn">Economy Saver</button>
+                  <div class="right">
+                    <h6>UK</h6>
+                    <img src="./images/plane-blue-small.png" alt="plane blue small">
+                    <h6>BD</h6>
+                  </div>
+                </div>
+                <div class="slide-content-item two">
+                  <h6>6 Flight Tickets</h6>
+                </div>
+                <div class="slide-content-item details">
+                  <div class="slide-content-item-detail">
+                    <p>Passenger</p>
+                    <h6>Raju Mullah</h6>
+                  </div>
+                  <div class="slide-content-item-detail">
+                    <p>Date</p>
+                    <h6>20 Nov 2022</h6>
+                  </div>
+                </div>
+                <div class="slide-content-item details">
+                  <div class="slide-content-item-detail">
+                    <p>Flight</p>
+                    <h6>#5486626661</h6>
+                  </div>
+                  <div class="slide-content-item-detail">
+                    <p>Gate</p>
+                    <h6>20 A</h6>
+                  </div>
+                </div>
+                <div class="slide-content-item details">
+                  <div class="slide-content-item-detail">
+                    <p>Class</p>
+                    <h6>Economy</h6>
+                  </div>
+                  <div class="slide-content-item-detail">
+                    <p>Seats</p>
+                    <h6>5B - 11B</h6>
+                  </div>
+                </div>
+                <div class="slide-content-item-hr">
+                  <img src="./images/horizontal bar.png" alt="hr bar half round">
+                </div>
+                <div class="slide-content-item-last ">
+                  <img src="./images/qr code.png" alt="hr bar half round">
+                </div>
+              </div>
+              <div class="swiper-slide slide-card">
+                <div class="slide-content-item one">
+                  <button class="btn">Economy Saver</button>
+                  <div class="right">
+                    <h6>UK</h6>
+                    <img src="./images/plane-blue-small.png" alt="plane blue small">
+                    <h6>BD</h6>
+                  </div>
+                </div>
+                <div class="slide-content-item two">
+                  <h6>6 Flight Tickets</h6>
+                </div>
+                <div class="slide-content-item details">
+                  <div class="slide-content-item-detail">
+                    <p>Passenger</p>
+                    <h6>Raju Mullah</h6>
+                  </div>
+                  <div class="slide-content-item-detail">
+                    <p>Date</p>
+                    <h6>20 Nov 2022</h6>
+                  </div>
+                </div>
+                <div class="slide-content-item details">
+                  <div class="slide-content-item-detail">
+                    <p>Flight</p>
+                    <h6>#5486626661</h6>
+                  </div>
+                  <div class="slide-content-item-detail">
+                    <p>Gate</p>
+                    <h6>20 A</h6>
+                  </div>
+                </div>
+                <div class="slide-content-item details">
+                  <div class="slide-content-item-detail">
+                    <p>Class</p>
+                    <h6>Economy</h6>
+                  </div>
+                  <div class="slide-content-item-detail">
+                    <p>Seats</p>
+                    <h6>5B - 11B</h6>
+                  </div>
+                </div>
+                <div class="slide-content-item-hr">
+                  <img src="./images/horizontal bar.png" alt="hr bar half round">
+                </div>
+                <div class="slide-content-item-last ">
+                  <img src="./images/qr code.png" alt="hr bar half round">
+                </div>
+              </div>
+              <div class="swiper-slide slide-card">
+                <div class="slide-content-item one">
+                  <button class="btn">Economy Saver</button>
+                  <div class="right">
+                    <h6>UK</h6>
+                    <img src="./images/plane-blue-small.png" alt="plane blue small">
+                    <h6>BD</h6>
+                  </div>
+                </div>
+                <div class="slide-content-item two">
+                  <h6>6 Flight Tickets</h6>
+                </div>
+                <div class="slide-content-item details">
+                  <div class="slide-content-item-detail">
+                    <p>Passenger</p>
+                    <h6>Raju Mullah</h6>
+                  </div>
+                  <div class="slide-content-item-detail">
+                    <p>Date</p>
+                    <h6>20 Nov 2022</h6>
+                  </div>
+                </div>
+                <div class="slide-content-item details">
+                  <div class="slide-content-item-detail">
+                    <p>Flight</p>
+                    <h6>#5486626661</h6>
+                  </div>
+                  <div class="slide-content-item-detail">
+                    <p>Gate</p>
+                    <h6>20 A</h6>
+                  </div>
+                </div>
+                <div class="slide-content-item details">
+                  <div class="slide-content-item-detail">
+                    <p>Class</p>
+                    <h6>Economy</h6>
+                  </div>
+                  <div class="slide-content-item-detail">
+                    <p>Seats</p>
+                    <h6>5B - 11B</h6>
+                  </div>
+                </div>
+                <div class="slide-content-item-hr">
+                  <img src="./images/horizontal bar.png" alt="hr bar half round">
+                </div>
+                <div class="slide-content-item-last ">
+                  <img src="./images/qr code.png" alt="hr bar half round">
+                </div>
+              </div>
+              <div class="swiper-slide slide-card">
+                <div class="slide-content-item one">
+                  <button class="btn">Economy Saver</button>
+                  <div class="right">
+                    <h6>UK</h6>
+                    <img src="./images/plane-blue-small.png" alt="plane blue small">
+                    <h6>BD</h6>
+                  </div>
+                </div>
+                <div class="slide-content-item two">
+                  <h6>6 Flight Tickets</h6>
+                </div>
+                <div class="slide-content-item details">
+                  <div class="slide-content-item-detail">
+                    <p>Passenger</p>
+                    <h6>Raju Mullah</h6>
+                  </div>
+                  <div class="slide-content-item-detail">
+                    <p>Date</p>
+                    <h6>20 Nov 2022</h6>
+                  </div>
+                </div>
+                <div class="slide-content-item details">
+                  <div class="slide-content-item-detail">
+                    <p>Flight</p>
+                    <h6>#5486626661</h6>
+                  </div>
+                  <div class="slide-content-item-detail">
+                    <p>Gate</p>
+                    <h6>20 A</h6>
+                  </div>
+                </div>
+                <div class="slide-content-item details">
+                  <div class="slide-content-item-detail">
+                    <p>Class</p>
+                    <h6>Economy</h6>
+                  </div>
+                  <div class="slide-content-item-detail">
+                    <p>Seats</p>
+                    <h6>5B - 11B</h6>
+                  </div>
+                </div>
+                <div class="slide-content-item-hr">
+                  <img src="./images/horizontal bar.png" alt="hr bar half round">
+                </div>
+                <div class="slide-content-item-last ">
+                  <img src="./images/qr code.png" alt="hr bar half round">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="section-travellers">
+    <div class="container-full">
+      <div class="travellers">
+        <h4 class="wow fadeInUp" data-wow-delay="0.2s">Best travellers of this month</h4>
+
+        <div id="MarqueeOne" class="marquee">
+          <div class="marquee-list trav-cards">
+            <div class="marquee-item trav-card">
+              <div class="trav-card-top">
+                <img src="./images/pro1.png" alt="">
+              </div>
+              <div class="trav-card-bot">
+                <img src="./images/user1.png" alt="user">
+                <h6>Raju Mullah</h6>
+                <p>@sdafddfdfdfdf</p>
+              </div>
+
+            </div>
+
+            <div class="marquee-item trav-card">
+              <div class="trav-card-top">
+                <img src="./images/pro2.png" alt="">
+              </div>
+              <div class="trav-card-bot">
+                <img src="./images/user2.png" alt="user">
+                <h6>Zaire Vetrovs</h6>
+                <p>@zairevetrovs</p>
+              </div>
+            </div>
+
+            <div class="marquee-item trav-card">
+              <div class="trav-card-top">
+                <img src="./images/pro3.png" alt="">
+              </div>
+              <div class="trav-card-bot">
+                <img src="./images/user3.png" alt="user">
+                <h6>Marcus Dias</h6>
+                <p>@marcusdias</p>
+              </div>
+            </div>
+
+            <div class="marquee-item trav-card">
+              <div class="trav-card-top">
+                <img src="./images/pro4.png" alt="">
+              </div>
+              <div class="trav-card-bot">
+                <img src="./images/user4.png" alt="user">
+                <h6>Davis Schleifer</h6>
+                <p>@davisschleifer</p>
+              </div>
+            </div>
+
+            <div class="marquee-item trav-card">
+              <div class="trav-card-top">
+                <img src="./images/pro3.png" alt="">
+              </div>
+              <div class="trav-card-bot">
+                <img src="./images/user3.png" alt="user">
+                <h6>Bob Martine</h6>
+                <p>@bobmartine</p>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <footer class="section-footer">
+    <div class="container-large">
+      <div class="footer">
+        <form name="subscribe-form" action="#">
+          <h4 class="wow fadeInUp" data-wow-delay="0.2s">Subscribe Newsletter & get letest news</h4>
+          <div class="sub-email-ip-wrap wow fadeInUp" data-wow-delay="0.4s">
+            <input type="text" value="" placeholder="Enter your email address">
+            <button class="btn">Subscribe</button>
+          </div>
+        </form>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- jQuery Marquee -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jQuery.Marquee/1.6.0/jquery.marquee.min.js"
+    integrity="sha512-JHJv/L48s1Hod24iSI0u9bcF/JlUi+YaxliKdbasnw/U1Lp9xxWkaZ3O5OuQPMkVwOVXeFkF4n4176ouA6Py3A=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <!--You need to include following plugin for pauseOnHover. If browser supports CSS3 animation than we don't need this plugin but its better as a fallback for older browsers-->
+  <script src="https://rawgithub.com/tobia/Pause/master/jquery.pause.js"></script>
+  <!-- WOW JS -->
+  <script src="https://cdn.rawgit.com/matthieua/WOW/1.0.1/dist/wow.min.js"></script>
+  <!-- Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+  <script>
+    /* WOWjs object */
+    let wow = new WOW().init();
+
+    /* Marqee */
+    if (document.body.clientWidth > 576) {
+      $('#MarqueeOne').marquee({
+        duration: 10000,
+        pauseOnHover: true,
+        duplicated: true,
+        gap: 100,
+        direction: 'left',
+      });
+    } else if (document.body.clientWidth < 576) {
+      $('#MarqueeOne').marquee({
+        duration: 10000,
+        pauseOnHover: true,
+        duplicated: true,
+        gap: 20,
+        direction: 'left',
+      });
+    }
+  </script>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      // Show the Economy form by default
+      showForm('booking-form-economy');
+    });
+
+    function showForm(formId) {
+      // Hide all forms
+      var forms = document.querySelectorAll('.booking-form');
+      forms.forEach(function (form) {
+        form.classList.remove('active');
+      });
+
+      // Deactivate all tab links
+      let tabLinks = document.querySelectorAll('.booking-tab-labels a');
+      tabLinks.forEach(function (link) {
+        link.classList.remove('active');
+      });
+
+      // Show the selected form
+      let selectedForm = document.getElementById(formId);
+      selectedForm.classList.add('active');
+
+      // Activate the clicked tab link
+      let clickedTab = document.querySelector('a[href="#' + formId + '"]');
+      clickedTab.classList.add('active');
+    }
+
+
+    /* hamburger menu */
+    // if(document.body.clientWidth > 992){}
+    function openCloseMenu() {
+      // if (document.body.clientWidth < 992) {
+      let x = document.getElementById("nav-menu");
+      if (x.style.display === "flex") {
+        x.style.display = "none";
+      } else {
+        x.style.display = "flex";
+      }
+      // }
+    }
+  </script>
+
+
+  <!-- Initialize Swiper -->
+  <script>
+    let swiper = new Swiper("#FlightCards", {
+      effect: "cards",
+      grabCursor: true,
+    });
+  </script>
+
+  <script>
+    /* navbar slide updown */
+    document.addEventListener("DOMContentLoaded", function () {
+      var navbar = document.getElementById("nav-wrap");
+      var heroSection = document.getElementById("section-hero");
+      var lastScrollTop = 0;
+
+      window.addEventListener("scroll", function () {
+        var st = window.scrollY;
+
+        if (st < lastScrollTop || st < heroSection.offsetHeight) {
+          navbar.style.transform = "translateY(0)";
+        } else {
+          navbar.style.transform = "translateY(-100%)";
+        }
+
+        lastScrollTop = st <= 0 ? 0 : st;
+      });
+
+    });
+  </script>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      // Add a class after a short delay to trigger the CSS transition
+      setTimeout(function () {
+        document.querySelector('.hero-plane').classList.add('scale-up-1');
+      }, 1000); // Adjust the delay as needed
+    });
+  </script>
+
+</body>
+
+</html>

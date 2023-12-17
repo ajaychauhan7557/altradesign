@@ -1,0 +1,163 @@
+NOTE :: demo to rotate/circulate/rounds div infinite time
+
+<!DOCTYPE html>
+<html>
+
+<head>
+  <style>
+    header {
+      padding: 50px;
+    }
+
+    div {
+      width: 12px;
+      background-color: red;
+      position: relative;
+      animation: anim1 10s linear infinite;
+    }
+
+    span {
+      display: block;
+      width: 20px;
+      font-size: 30px;
+      background-color: green;
+      animation: anim2 5s linear infinite;
+
+    }
+
+    @keyframes anim2 {
+      0% {
+        transform:
+          rotate(-359deg);
+      }
+
+      100% {
+        transform:
+          rotate(360deg);
+      }
+    }
+
+    @keyframes anim1 {
+      0% {
+        transform:
+          translate(0px, 0px) rotate(-359deg) scale(0) skewZ(50deg);
+        /*
+      transform:
+        rotate(-359deg) translate(-50px, -50px);
+        */
+        opacity: 1;
+      }
+
+      10% {
+        transform: translate(100px, -100px) rotate(360deg) scale(2) skewZ(45deg);
+      }
+
+      20% {
+        transform: translate(50px, -50px) rotate(-359deg) scale(5) skew(20deg);
+      }
+
+      30% {
+        transform: translate(120px, 0px) rotate(359deg) scale(0) skew(200deg);
+      }
+
+      40% {
+        transform: translate(200px, 100px) rotate(-359deg) scale(4) skew(45deg);
+      }
+
+      50% {
+        transform: translate(100px, 200px) rotateY(180deg) scale(3);
+      }
+
+      60% {
+        transform: translate(0px, 170px) rotateX(-360deg) scale(8);
+      }
+
+      70% {
+        transform: translate(200px, 120px) rotateX(360deg) scale(6);
+      }
+
+      80% {
+        transform: translate(100px, 80px) rotateX(-360deg) scale(1);
+      }
+
+      90% {
+        transform: translate(0px, 40px) rotate(359deg) scale(3);
+      }
+
+      100% {
+        transform:
+          translate(0px, 0px) rotate(-359deg) scale(0);
+        /*
+      transform:
+        rotate(0deg) translate(-50px, -50px);
+        */
+      }
+    }
+  </style>
+
+  <style>
+    /* move ball smoothly */
+    #ball {
+      animation: moveSmoothly 15s linear infinite;
+    }
+
+    @keyframes moveSmoothly {
+      0% {
+        transform: translate(0, 0);
+      }
+
+      20% {
+        transform: translate(50px, 0px);
+      }
+
+      30% {
+        transform: translate(30px, 20px);
+      }
+
+      40% {
+        transform: translate(40px, 0px);
+      }
+
+      50% {
+        transform: translate(9px, 20px);
+      }
+
+      60% {
+        transform: translate(35px, 45px);
+      }
+
+      70% {
+        transform: translate(12px, 2px);
+      }
+
+      80% {
+        transform: translate(27px, 10px);
+      }
+
+      90% {
+        transform: translate(10px, 34px);
+      }
+
+      100% {
+        transform: translate(0, 0);
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <h4>CSS Animation can be apply only on Block level property of element</h4>
+
+  <p>The animation-delay property specifies a delay before starting the animation:</p>
+  <span>B</span>
+  <header>
+    <div>A</div>
+  </header>
+
+  <img id="ball" src="https://m.media-amazon.com/images/I/412VcnPaf2L.jpg" height="200px" width="200px">
+
+
+</body>
+
+</html>
